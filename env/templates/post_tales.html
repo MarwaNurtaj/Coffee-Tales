@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        
+        body {
+        background-color: #f0bb957d;
+        }
+        input[type=text],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=password],
+        select {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        input[type=submit] {
+            width: 100%;
+            background-color: #460a0a7b;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #4d12127b;
+        }
+
+        div {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <img src="{{ url_for('static', filename='images/newsletter-bg.jpg') }}" height="100" width="1580" alt="">
+
+    <div class="login-form">
+
+        <h3>Share Your story</h3>
+
+        <form action="/post_tales" method="POST">
+
+            <label>Name</label>
+            <input type="text" name="name" placeholder="name">
+
+            <label>Story</label>
+            <input type="text" name="story" placeholder="story">
+
+            <input type="submit" value="Submit">
+
+        </form>
+
+    </div>
+
+    <div>
+        <ul class="list-group t20">
+            {% for i in nw %}
+
+                <li class="list-group-item ">
+                    {{ i.name }} : {{ i.story }}
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+
+</html>

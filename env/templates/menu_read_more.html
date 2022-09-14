@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block feat %}
+<style>
+    body {
+        background-color: #512A10;
+    }
+</style>
+{% endblock %}
+
+{% block content %}  <section class="menu" id="menu" style="background-color: #e0b3b37b;">
+<br><br>
+        <h1 class="heading"><br><br> Our Menu </h1>
+    
+        <div class="container box-container">
+    
+            <div class="box">
+                <img src="{{ url_for('static', filename='images/menu-5.png') }}" alt="">
+                <h3    style="border: #4d12127b;color: #512A10;text-align: center; text-decoration: wavy;">CAPPUCCINO</h3>
+                <p style="color: block; background-color: bisque;">An espresso with steamed milk and only a little milk foam poured over it.
+                    Espresso (/ɛsprɛsoʊ/ (listen), Italian: [esprɛsso]) is a coffee-brewing method of Italian origin,[1] in which a small amount of nearly boiling water (about 90 °C or 190 °F) is forced under 9–10 bars (900–1,000 kPa; 130–150 psi) of pressure through finely-ground coffee beans. Espresso can be made with a wide variety of coffee beans and roast degrees. Espresso is the most common way of making coffee in southern Europe, especially in Italy, France, Spain, and Portugal. It is also popular in Switzerland, Croatia, Bosnia and Herzegovina, Bulgaria, Greece, and Australia.
+
+Espresso is generally thicker than coffee brewed by other methods, with a viscosity similar to that of warm honey. This is due to the higher concentration of suspended and dissolved solids, and the crema on top (a foam with a creamy consistency).[2] As a result of the pressurized brewing process, the flavors and chemicals in a typical cup of espresso are very concentrated. Espresso has more caffeine per unit volume than most coffee beverages, but because its usual serving size is much smaller than (for example) drip-brewed coffee, the caffeine content of a single serving of espresso is generally lower than that of a mug of drip coffee.[3] The actual caffeine content of any coffee drink varies by size, bean origin, roast method and other factors, but a typical 28 grams (1 ounce) serving of espresso usually contains 64.5 milligrams of caffeine, whereas a typical serving of drip coffee usually contains 150 to 200 mg.[4][5][6]
+
+The three dispersed phases in espresso are what make this beverage unique. The first dispersed phase is an emulsion of oil droplets. The second phase is suspended solids, while the third is the layer of gas bubbles or foam. The dispersion of very small oil droplets is perceived in the mouth as creamy. This characteristic of espresso contributes to what is known as the body of the beverage. These oil droplets preserve some of the aromatic compounds that are lost to the air in other coffee forms, enhancing the strong flavor of espresso.[7]
+                </p>
+            </div>
+    
+
+        </div>
+    
+        </section>
+
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+        {% endblock %}

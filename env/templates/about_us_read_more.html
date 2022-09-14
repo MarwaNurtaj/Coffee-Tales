@@ -1,0 +1,58 @@
+{% extends "base.html" %}
+
+{% block feat %}
+<style>
+    body {
+        background-color: #512A10;
+    }
+</style>
+{% endblock %}
+
+{% block content %}
+<div style="margin-top: 200px">
+    <h1 class="heading text-light"> We are glad that you have Interest to know about COFFEE TALES</h1>
+    <div class="container box-container">
+        <div class="text-light">
+            <img src="{{ url_for('static', filename='images/ab.jpg') }}" height="200" width="500" alt="">
+            <h3>About Us</h3>
+            <p style="font-size: 1.2rem;">
+                We believe our real purpose in life can be found in serving others. We found ours in serving you
+                through coffee.
+
+                At UrbanUs, each day starts with a great cup of coffee with family, friends, co-workers ... As great
+                coffee should be experienced - not rushed!
+
+                Our company was founded based on a passion to deliver you fresh roasted premium coffees that taste
+                the way coffee was meant to taste, and we think a great cup of coffee inspires great conversation.
+                In some small way, we hope to impact this world through great tasting coffee shared in community
+                with others.
+
+                OUR COMMITMENT TO BUILDING COMMUNITY
+                At UrbanUs Coffee, community includes all of us ... wherever we live, work, rest, and play. Our
+                similarities outweigh our differences and our belief is that we can build community one cup at a
+                time, whether here in the Southwest, with you our customers, and across the globe in the farm
+                communities that produce our delicious coffee beans.
+
+                But we are more than just a coffee fix, we have a vision to serve and educate through scholarships
+                and training programs in both barista training and roasting; giving the opportunity to elevate youth
+                and the underprivileged with life changing skills and opportunities.
+
+                Connect with us in person at one of our local Coffee Tasting Events in the Phoenix area. Follow us
+                on Facebook or Instagram for the next tasting event.
+
+                OUR COMMITMENT TO GREAT COFFEE
+                Taste: We are committed to crafting you excellent roasted whole bean coffee delivered fresh. We
+                roast our coffees in a fluid bed roaster in small batches using traditional sight, smell, sound, & a
+                bit of technology to craft flavor.
+
+                Health & Environment: Our Coffee is roasted in an environmentally friendly manner while burning no
+                fossil fuels. We use only clean, hydroelectricity generated here in the Southwest leaving a minimal
+                carbon footprint.
+
+                Sourcing our Beans: We are committed to bringing you responsibly sourced, high quality arabica
+                beans. This is based on a commitment to our growers & their communities
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

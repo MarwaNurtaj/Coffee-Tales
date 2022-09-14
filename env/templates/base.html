@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Tales</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    {% block feat %} {% endblock %}
+</head>
+
+<body>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+    {% if messages %}
+    {% for category, message in messages %}
+    <div class="alert alert-{{ category }}" style="position: absolute; min-width: 500px;" role="alert">
+        {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    <!-- header section starts     -->
+    <header class="header fixed-top">
+        <div class="container">
+            <div class="row align-items-center">
+                <a href="{{ url_for('home') }}" class="logo mr-auto"> <i class="fas fa-mug-hot"
+                        style="font-size:36px; color:rgb(183, 164, 164)"></i> Coffee Tales </a>
+                <nav class="nav">
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#menu">Menu</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#reviews">Reviews</a>
+                    <a href="#contact">Contact</a>
+                    <a href="#blogs">Blogs</a>
+                    {% if auth %}
+                    <a href="{{ url_for('post_tales') }}">Post Your Tales</a>
+                    {% endif %}
+                </nav>
+                <div class="icons">
+                    <div id="menu-btn" class="fas fa-bars"></div>
+                    <span class="text-light" style="z-index: 999;">{{s}}</span>
+                    {% if not auth %}
+                    <div id="login-btn" class="fas fa-user"></div>
+                    {% else %}
+                    <a class="btn btn-sm btn-light" href="{{ url_for('logout') }}"><span
+                            style="font-weight: 1000;">Logout</span></a>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </header>
+    {% block content %} {% endblock %}
+    <!-- custom js file link  -->
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+
+</html>

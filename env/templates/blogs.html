@@ -1,0 +1,47 @@
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Tales</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- bootstrap cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.1/css/bootstrap.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+    </head>
+    <body>    
+        <section class="menu" id="menu">
+
+        <h1 class="heading"> Our Blogs </h1>
+
+        <div class="blo">
+            <h3>Video</h3>
+            <p>This is a personal blog as I wanted to share how blogging has personally changed my life. </p>                
+            <iframe width="1000" height="400" src="https://www.youtube.com/embed/EOAPMhaCtuw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="blo">
+            <h3>Recipe</h3>
+            <p>This is a personal blog as I wanted to share how blogging has personally changed my life. </p>
+            <iframe width="1000" height="400" src="https://www.youtube.com/embed/PcCSRrkEcKE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>    
+
+        <div class="blo" id="blo">
+            <h3>Interior</h3>
+            <p>This is a personal blog as I wanted to share how blogging has personally changed my life. </p>
+            <iframe width="1000" height="400" src="https://www.youtube.com/embed/9QWPp4P-UPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>   
+
+    
+        </section>
+        <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    </body>
+    </html>

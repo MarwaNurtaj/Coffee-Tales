@@ -1,0 +1,73 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        /* Create two equal columns that floats next to each other */
+        .column {
+            float: left;
+            width: 50%;
+            padding: 10px;
+            height: 500px;
+            /* Should be removed. Only for demonstration */
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="{{ url_for('static', filename='images/newsletter-bg.jpg') }}" height="100" width="1580" alt="">
+    <a href="{{ url_for('home') }}" class="logo mr-auto"> <i class="fas fa-mug-hot" style="border:#460a0a7b"></i>
+        Coffee Tales </a>
+    <h3>Let's start a new great day</h3>
+
+
+    <div class="row">
+        <div class="column" style="background-color:#aaa;">
+            <img src="{{ url_for('static', filename='images/ab.jpg')  }}" height="400" width="500">
+        </div>
+        <div class="column" style="background-color:#bbb;">
+            <form action="/order" method="POST">
+
+
+                <label for="fname">Name:</label><br><br>
+                <input type="text" id="fname" name="fname" value=""><br><br>
+
+                <label for="cfe">Choose Your Coffee:</label><br><br>
+                <select name="cfe" id="cfe">
+                    <option value="CAPPUCCINO">CAPPUCCINO</option>
+                    <option value="COLD BREW COFFEE">COLD BREW COFFEE</option>
+                    <option value="ESPRESSO">ESPRESSO</option>
+                    <option value="ICED LATTE">ICED LATTE</option>
+                    <option value="CAFFÈ MOCHA">CAFFÈ MOCHA</option>
+                    <option value="CAFFÈ MOCHA">CAFFÈ MOCHA</option>
+                </select><br><br>
+
+                <label for="num">Mobile:</label><br><br>
+                <input type="number" id="num" name="num" value=""><br><br>
+
+                <label for="adrs">Address:</label><br><br>
+                <input type="text" id="adrs" name="adrs" value=""><br><br>
+
+                <input type="checkbox" id="quantity" name="quantity" value="1">
+                <label for="quantity"> Quantity 1 </label><br><br>
+
+                <input type="submit" value="Submit"><br>
+
+                <h2>{{sucMsg}}</h2>
+
+                <a href="{{ url_for('delete') }}">Delete Order</a>
+
+            </form>
+        </div>
+    </div>
+
+</body>
